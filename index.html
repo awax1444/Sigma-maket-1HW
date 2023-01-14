@@ -12,7 +12,9 @@
 <body>
     <header class="header">
         <nav class="navigation">
-            <a class="nav-logo" title="Alivio" href="#">Alivio</a>
+            <a class="nav-logo" title="Alivio" href="#">
+                <img src="pictures/Logo.png" alt="Logo">
+            </a>
             <ul class="nav-bar">
                 <li><a class="nav-bar-item" title="Why Alivio" href="#">Why Alivio</a></li>
                 <li><a class="nav-bar-item" title="Solutions" href="#">Solutions</a></li>
@@ -21,7 +23,7 @@
             </ul>
             <ul class="nav-action">
                 <li><a class="nav-action-item" title="Sign in" href="#">Sign in</a></li>
-                <li><button class="nav-action-item-btn">Start Trial</button></li>
+                <li><button class="btn nav-btn">Start Trial</button></li>
             </ul>
         </nav>
     </header>
@@ -103,44 +105,47 @@
 
         </section>
         <section class="product">
-            <div class="product-col">
+            <div class="product-container">
                 <div class="product-img-container">
                     <img class="product-col-img" src="pictures/product.png" alt="product">
+                    <div class="product-card">
+                        <div class="product-card-container">
+                            <div class="product-card-title">Customized For</div>
+                            <div class="avatar-img-container">
+                                <img class="card-avatar-img" src="pictures/product-avatar.png" alt="product-avatar">
+                            </div>
+                            <p class="card-avatar-img-txt">Mikayla</p>
+                            <div class="card-heading">Your custom contents</div>
+                            <ul class="card-list">
+                                <li class="card-list-item">Understand Your Stress</li>
+                                <li class="card-list-item">Anger Management</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="product-col-txt">
                     <div class="product-txt-container">
                         <div class="product-subtitle">Our product</div>
-                    <h2 class="product-title">You tell us your stress, We make your diary</h2>
-                    <p class="product-text">Everyone experiences it, and in different ways.
-                        Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
-                    <div class="product-btn-container">
-                        <button class="btn">Find Your Way</button>
-                    </div>
+                        <h2 class="product-title">You tell us your stress, We make your diary</h2>
+                        <p class="product-text">Everyone experiences it, and in different ways.
+                            Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
+                        <div class="product-btn-container">
+                            <button class="btn">Find Your Way</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="product-card shadow">
-                <div class="product-card-container">
-                    <div class="product-card-title">Customized For</div>
-                    <div class="avatar-img-container">
-                        <img class="card-avatar-img" src="pictures/product-avatar.png" alt="product-avatar">
-                    </div>
-                <p class="card-avatar-img-txt">Mikayla</p>
-                <div class="card-heading">Your custom contents</div>
-                <ul class="card-list">
-                    <li class="card-list-item">Understand Your Stress</li>
-                    <li class="card-list-item">Anger Management</li>
-                </ul>
-                </div> 
-            </div>
+
         </section>
-    </main> 
+    </main>
     <footer class="footer">
         <div class="footer-wrap">
             <div class="footer-nav">
                 <ul class="footer-nav-list">
-                    <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" id="Alivio" title="Alivio" href="#">Alivio</a></li>
-                    <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" id="shadow-text" title="Why Alivio" href="#">Why
+                    <li class="footer-nav-list-item"><a class="footer-nav-list-item-link footer-logo" title="Alivio"
+                            href="#">Alivio</a></li>
+                    <li class="footer-nav-list-item"><a class="footer-nav-list-item-link shadow-text" title="Why Alivio"
+                            href="#">Why
                             Alivio</a></li>
                     <li class="footer-nav-list-item"><a class="footer-nav-list-item-link" title="Solutions"
                             href="#">Solutions</a></li>
@@ -152,16 +157,26 @@
             </div>
             <div class="footer-social">
                 <div class="social-container-img">
-                <img class="footer-social-img" src="pictures/face.png" title="facebook.com" alt="facebook">
-                <img class="footer-social-img" src="pictures/insta.png" title="instagram.com" alt="instagram">
-                <img class="footer-social-img" src="pictures/twit.png" title="twitter.com" alt="twitter">
+                    <a class="footer-social-link" href="#">
+                        <img src="pictures/face.png" title="facebook.com" alt="facebook">
+                    </a>
+                    <a class="footer-social-link" href="#">
+                        <img src="pictures/insta.png" title="instagram.com" alt="instagram">
+                    </a>
+                    <a class="footer-social-link" href="#">
+                        <img src="pictures/twit.png" title="twitter.com" alt="twitter">
+                    </a>
                 </div>
             </div>
             <div class="footer-store">
                 <div class="footer-store-article">Discover our solutions</div>
                 <div class="store-container-img">
-                    <img class="footer-store-img" src="pictures/google.png" alt="Google Play"  title="Google Play.com">
-                    <img class="footer-store-img" src="pictures/apple.png" alt="Apple Store" title="Apple Store.com">
+                    <a class="store-link" href="#">
+                        <img src="pictures/google.png" alt="Google Play" title="Google Play.com">
+                    </a>
+                    <a class="store-link" href="#">
+                        <img src="pictures/apple.png" alt="Apple Store" title="Apple Store.com">
+                    </a>
                 </div>
             </div>
         </div>
@@ -169,4 +184,3 @@
 </body>
 
 </html>
-

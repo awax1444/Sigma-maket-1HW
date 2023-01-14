@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html,
 body,
 header,
@@ -19,89 +25,82 @@ img {
     height: auto;
 }
 
-
 .header {
+    padding: 0px 6vw;
     background-color: white;
     border-bottom: 1px solid rgb(192, 192, 192, 0.4);
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding-top: 35px;
     padding-bottom: 15px;
 }
 
+.navigation a:hover {
+    text-decoration: underline;
+}
+
 .nav-logo {
-    font-size: 30px;
-    color: #01996D;
-    text-decoration: 0;
-    margin-left: 5%;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    width: 80px;
+    flex-shrink: 0;
 }
 
 .nav-bar {
+    margin-bottom: 20px;
+    padding: 0;
     list-style-type: none;
-    display: flex;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .nav-bar-item {
-    margin-inline: 50px;
-    text-decoration: 0;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
     font-size: 20px;
     color: black;
 }
 
 .nav-action {
-    position: relative;
-    display: flex;
+    padding: 0;
     list-style-type: none;
     align-items: center;
-    bottom: -1px;
+}
+
+.nav-btn {
+    margin-top: 10px;
 }
 
 .nav-action-item {
-    margin-inline: 25px;
-    text-decoration: 0;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
     font-size: 20px;
     color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.nav-action-item-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #01996D;
-    padding: 13px 50px 13px 50px;
-    gap: 30px;
-    border: 1px solid #01996D;
-    border-radius: 4px;
-    width: 277px;
-    height: 51px;
-    top: 28px;
-    color: white;
-    font-size: 20px;
-}
-
 .nav-action-item-btn-txt {
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 .hero {
     position: relative;
+    min-height: 300px;
+    padding: 70px 6vw;
 }
 
-.hero-content {
+.hero-img {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 400px;
-    padding-left: 6vw;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1
 }
-
-
 
 .hero-title {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -109,7 +108,6 @@ img {
     font-weight: 100;
     font-size: 65px;
     margin-bottom: 30px;
-
 }
 
 .hero-txt {
@@ -127,42 +125,35 @@ img {
     font-size: 20px;
 }
 
-.hero-btn-txt {
-    text-decoration: 0;
+.btn:hover {
+    background-color: #007554;
 }
 
-.hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
+.hero-btn-txt {
+    text-decoration: none;
 }
 
 .steps {
     padding: 30px 6vw;
 }
 
-
 .steps-info {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     margin-bottom: 100px;
-    padding: 50px 50px;
-}
-
-.steps-header {
-    padding: 50px 0;
-    flex: 1;
+    padding: 20px;
 }
 
 .steps-subtitle {
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .steps-title {
+    margin-top: 15px;
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 700;
@@ -171,14 +162,13 @@ img {
 }
 
 .steps-txt {
-    flex: 1;
     font-size: 24px;
-    padding: 125px 0 0 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .steps-row {
     display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
@@ -209,7 +199,7 @@ img {
 }
 
 .card-center {
-    margin-top: 170px;
+    margin-top: 30px;
 }
 
 .card-right {
@@ -249,21 +239,22 @@ img {
 }
 
 .product {
-    padding: 150px 15vw 160px 17vw;
+    padding: 50px 5vw 50px 5vw;
 }
 
-.product-col {
+.product-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     gap: 55px;
 }
 
 .product-img-container {
-    width: 50%;
+    position: relative;
+    flex: 1;
 }
 
 .product-col-txt {
-    width: 50%;
+    flex: 1;
 }
 
 .product-txt-container {
@@ -290,16 +281,13 @@ img {
 }
 
 .product-card {
-    position: absolute;
-    margin: -164px 0px 0px 110px;
-    left: 10px;
-    width: 330px;
-    box-shadow: 5px 5px gray;
+    position: relative;
+    margin-top: -14vw;
+    width: 300px;
     background-color: #FFFFFF;
-}
-
-.shadow {
+    border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 5;
 }
 
 .product-card-container {
@@ -310,22 +298,31 @@ img {
 }
 
 .avatar-img-container {
-    width: 22%;
+    width: 58px;
+    height: 58px;
     margin-bottom: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .product-card-title {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
-    padding-bottom: 10px;
+    padding: 0 10px 10px;
     font-weight: 600;
     font-size: 15px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-bottom: solid white 1.5px;
+    border-bottom: solid black 1.5px;
 }
 
 .card-avatar-img-txt {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
 }
@@ -351,25 +348,12 @@ img {
 
 .footer-wrap {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
 }
 
 .footer-nav {
     flex: 1;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#Alivio {
-    font-size: 30px;
-    font-weight: 650;
-}
-
-.footer-nav-list {
-    list-style-type: none;
-}
-
-.footer-nav-list-item {
-    margin-bottom: 50px;
 }
 
 .footer-nav-list-item-link {
@@ -378,54 +362,150 @@ img {
     color: #FFFFFF;
 }
 
-#shadow-text {
+.footer-logo {
+    font-size: 30px;
+    font-weight: 650;
+}
+
+.footer-nav-list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer-nav-list-item {
+    margin-bottom: 50px;
+}
+
+.shadow-text {
     color: #245852;
     text-shadow: -1px 0px #FFFFFF, 0px -1px white, 1px 0px white, 0px 1px white, -1px -1px white, 1px 1px white;
 }
 
 .footer-social {
     flex: 1;
-    margin: 350px 20px 10px 0px;
-
+    margin: 0 20px 10px 0px;
 }
 
 .social-container-img {
     display: flex;
-    width: 50%;
-    height: auto;
+    justify-content: center;
 }
 
-.footer-social-img {
+.footer-social-link {
+    display: inline-block;
+    width: 110px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .footer-store {
     flex: 1;
-    margin-top: 315px;
     padding: 10px 40px 10px 40px;
 }
 
 .footer-store-article {
-    margin-left: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #FFFFFF;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
+    text-align: center;
 }
 
 .store-container-img {
     display: flex;
-    width: 40%;
-    height: auto;
+    justify-content: center;
 }
 
-.footer-store-img {
+.store-link {
+    display: inline-block;
     padding-left: 10px;
     padding-right: 10px;
+    max-width: 216px;
 }
 
 @media screen and (min-width: 992px) {
+
+    .nav-logo {
+        margin: 0;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+
+    .nav-bar {
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    .nav-action {
+        display: flex;
+    }
+
+    .hero {
+        display: flex;
+        min-height: 50vw;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 440px;
+    }
+
+    .card-center {
+        margin-top: 230px;
+    }
+
+    .steps-row {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .steps-header {
+        padding: 50px 0;
+        flex: 1;
+    }
+
+    .steps-txt {
+        flex: 1;
+        font-size: 24px;
+        padding: 110px 0 0 0;
+    }
+
+
+    .steps-info {
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 100px;
+        padding: 50px 50px;
+    }
+
+    .product {
+        padding: 150px 10vw 150px 10vw;
+    }
+
+    .product-container {
+        flex-direction: row;
+        gap: 55px;
+    }
+
+    .product-card {
+        position: absolute;
+        margin-top: -14vw;
+        margin-left: -70px;
+    }
+
+
+    .footer-wrap {
+        flex-direction: row;
+        gap: 30px;
+        align-items: end;
+    }
 
     .video {
         padding: 30px 10vw;
